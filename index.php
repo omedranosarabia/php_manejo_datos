@@ -1,44 +1,43 @@
 <?php
 
-    echo 'Un texto de una línea
-    varias líneas
-    comilla simple \' backslash \\ continuar con más texto
-    $variable <br>';
+$data = 'Estudio PHP';
 
-    $name = 'Omar';
-    echo '<br>';
-    echo "Mi nombre es $name";
-    echo '<br>';
-    echo 'Mi nombre es ' . $name . '<br>';
+//echo $data[0];
 
-    $courses = ['backend' => 'PHP'];
+//$post = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fuga dolor nobis blanditiis cumque, non nulla sequi itaque, quasi expedita totam commodi repellendus aperiam ea dolores aliquid, eveniet quisquam eos?";
 
+//$extrac = substr($post, 0, 20);
 
-class User{
+//echo "$extrac... [ver más]";
 
-    public $name = 'Omar';
-}
-    
-$user = new User;
+/**
+    $data = 'javascript, php, laravel'; //campo tags
 
+    $tags = explode(',', $data); // array
 
+    echo "<pre";
+    var_dump($tags);
+    echo "</pre"; 
+ */
 
-//echo "$user->name quiere aprender $courses['backend']";
+//$courses = ['javascript', 'php', 'laravel'];
 
-//Variables variables
+//echo implode(', ', $courses);
 
-$teacher = 'omar';
+$course = "     Curso de PHP   ";
+$course = ltrim($course);
+echo "<pre>";
+echo "Quiero aprender $course, y otro texto";
+echo "</pre>";
 
-$omar = 'Profesor de PHP';
+$course = "     Curso de PHP   ";
+$course = rtrim($course);
+echo "<pre>";
+echo "Quiero aprender $course, y otro texto";
+echo "</pre>";
 
-echo "$teacher es ${$teacher}";
-
-function getTeacher(){
-
-    return 'teacher';
-
-}
-
-$teacher = 'Omar';
-echo '<br>';
-echo "{${getTeacher()}} enseña PHP";
+$course = "     Curso de PHP   ";
+$course = trim($course);
+echo "<pre>";
+echo "Quiero aprender $course, y otro texto";
+echo "</pre>";
