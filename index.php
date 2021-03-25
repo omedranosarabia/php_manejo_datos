@@ -1,7 +1,34 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+// Valores
+// function greet($name)
+// {
+//     return "Hola, $name";
+// }
 
-var_dump(App\Validate::email('omedrano@gmail.com'));
+// echo greet('Omar');
+// echo '<br>';
 
-var_dump(App\Validate::password('0123elonMusk'));
+// Referencias
+$course = 'PHP';
+// El & convierte el parámetro a parámetro por referencia
+function patch(&$course)
+{
+    $course = 'Laravel';
+    echo $course;
+}
+
+patch($course);
+echo '<br>';
+echo $course;
+
+// Predeterminado
+
+function greet($name = 'Omar'){
+    return "Hola, $name";
+}
+echo '<br>';
+echo greet();
+echo '<br>';
+echo greet('Elon');
+
