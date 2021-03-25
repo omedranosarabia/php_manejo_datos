@@ -1,43 +1,29 @@
 <?php
 
-$data = 'Estudio PHP';
+// Alterar
+$text = "PHP es UN LENGUAJE año 2021, programación"; //slug
 
-//echo $data[0];
+//echo strtolower($text);
+//echo strtoupper($text);
+//echo ucfirst($text);
+// echo lcfirst($text);
 
-//$post = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fuga dolor nobis blanditiis cumque, non nulla sequi itaque, quasi expedita totam commodi repellendus aperiam ea dolores aliquid, eveniet quisquam eos?";
+// Reemplazar
+$slug = str_replace(' ', '-', $text);
 
-//$extrac = substr($post, 0, 20);
+// echo strtolower($slug);
 
-//echo "$extrac... [ver más]";
+// Modificación
 
-/**
-    $data = 'javascript, php, laravel'; //campo tags
+$code = 39;
+// echo str_pad($code, 8, '#', STR_PAD_BOTH);
+// echo '<br>';
+// echo str_pad($code, 8, '#', STR_PAD_LEFT);
+// echo '<br>';
+// echo str_pad($code, 8, '#', STR_PAD_RIGHT);
 
-    $tags = explode(',', $data); // array
+// echo strip_tags($text);
 
-    echo "<pre";
-    var_dump($tags);
-    echo "</pre"; 
- */
-
-//$courses = ['javascript', 'php', 'laravel'];
-
-//echo implode(', ', $courses);
-
-$course = "     Curso de PHP   ";
-$course = ltrim($course);
-echo "<pre>";
-echo "Quiero aprender $course, y otro texto";
-echo "</pre>";
-
-$course = "     Curso de PHP   ";
-$course = rtrim($course);
-echo "<pre>";
-echo "Quiero aprender $course, y otro texto";
-echo "</pre>";
-
-$course = "     Curso de PHP   ";
-$course = trim($course);
-echo "<pre>";
-echo "Quiero aprender $course, y otro texto";
-echo "</pre>";
+echo strtoupper($text); //Elemento monobyte
+echo '<br>';
+echo mb_strtoupper($text); //Elemento multibyte
