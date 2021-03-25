@@ -1,29 +1,11 @@
 <?php
 
-// Alterar
-$text = "PHP es UN LENGUAJE año 2021, programación"; //slug
+$password1 = '123456a';
+$password2 = '12345678910';
+$password3 = '123456';
 
-//echo strtolower($text);
-//echo strtoupper($text);
-//echo ucfirst($text);
-// echo lcfirst($text);
-
-// Reemplazar
-$slug = str_replace(' ', '-', $text);
-
-// echo strtolower($slug);
-
-// Modificación
-
-$code = 39;
-// echo str_pad($code, 8, '#', STR_PAD_BOTH);
-// echo '<br>';
-// echo str_pad($code, 8, '#', STR_PAD_LEFT);
-// echo '<br>';
-// echo str_pad($code, 8, '#', STR_PAD_RIGHT);
-
-// echo strip_tags($text);
-
-echo strtoupper($text); //Elemento monobyte
-echo '<br>';
-echo mb_strtoupper($text); //Elemento multibyte
+//Quiero una contraseña que contenga únicamente números
+//Y que además contenga de 6 a 9 caracteres
+var_dump((bool)preg_match('/^[0-9]{6,9}$/', $password1));
+var_dump((bool)preg_match('/^[0-9]{6,9}$/', $password2));
+var_dump((bool)preg_match('/^[0-9]{6,9}$/', $password3));
