@@ -1,34 +1,11 @@
 <?php
 
-// Valores
-// function greet($name)
-// {
-//     return "Hola, $name";
-// }
-
-// echo greet('Omar');
-// echo '<br>';
-
-// Referencias
-$course = 'PHP';
-// El & convierte el parámetro a parámetro por referencia
-function patch(&$course)
+function greet()
 {
-    $course = 'Laravel';
-    echo $course;
+    //return ['PDF', 'vista'];
 }
 
-patch($course);
-echo '<br>';
-echo $course;
+var_dump(greet());
 
-// Predeterminado
-
-function greet($name = 'Omar'){
-    return "Hola, $name";
-}
-echo '<br>';
-echo greet();
-echo '<br>';
-echo greet('Elon');
-
+exit(); // detiene el sistema
+return; // retorna
