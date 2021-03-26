@@ -1,34 +1,46 @@
-<?php
+<?php 
 
-$courses = ['javascript', 'php'];
+$frontend = [
+    'Frontend' => 'javascript'
+];
 
-$wishes = ['php', 'laravel', 'javascript', 'vuejs'];
+$backend = [
+    'Backend' => 'php', 
+    'Framework' => 'laravel'
+];
 
-// var_dump(array_diff($wishes, $courses));
+var_dump($frontend + $backend);
 
-$arrayA = [1, 2, 3, 4, 5];
-$arrayB = [3, 4, 5, 6, 7];
+$frontend = ['javascript'];
 
-var_dump(array_diff($arrayA, $arrayB));
-var_dump(array_diff($arrayB, $arrayA));
+$backend = ['php', 'laravel'];
 
-// Función que muestra las diferencias entre dos array con base
-// en los valores y los keys
-// Si el mismo array tiene dos o más llaves idénticas, sólo considera la última
+var_dump(array_merge($frontend, $backend));
 
-$courses = ['Frontend' => 'javascript', 'Backend' => 'php'];
-echo 'Courses <br>';
-var_dump($courses);
-$wishes = ['Backend' => 'php', 'Framework' => 'laravel', 'Frontend' => 'javascript', 'Framework' => 'vuejs'];
-echo 'Wishes <br>';
-var_dump($wishes);
-var_dump(array_diff_assoc($wishes, $courses));
+$frontend = [
+    'a' => 'javascript'
+];
 
+$backend = [
+    'a' => 'php', 
+    'b' => 'laravel'
+];
 
-$array1    = array("a" => "green", "b" => "brown", "c" => "blue", "red");
-$array2    = array("a" => "green", "z" => "yellow", "z" => "red", "z" => "orange");
-$resultado = array_diff_assoc($array1, $array2);
-var_dump($resultado);
+var_dump(array_merge($frontend, $backend));
 
-$resultado = array_diff_assoc($array2, $array1);
-var_dump($resultado);
+$frontend = [
+    'a' => 'javascript'
+];
+
+$backend = [
+    'a' => 'php', 
+    'b' => 'laravel'
+];
+
+var_dump(array_merge_recursive($frontend, $backend));
+
+$courses = ['javascript', 'php', 'laravel'];
+
+$categories = ['front', 'back', 'framework'];
+
+var_dump(array_combine($categories, $courses));
