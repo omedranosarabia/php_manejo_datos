@@ -1,38 +1,54 @@
 <?php
-// Array simple
-$courses = [
-    'frontend' => 'javascript',
-    'framework' => 'laravel',
-    'backend' => 'php'
-];
+
+$courses = ['php', 'javascript', 'laravel'];
+
+// Ordenar arrays
+sort($courses);
+
+var_dump($courses);
+
+// Ordenar descendente
+rsort($courses);
+
+var_dump($courses);
+
+$courses = [ 10 => 'php', 100 => 'javascript', 1000 => 'laravel'];
+
+// Ordenar usando keys
+ksort($courses);
+
+var_dump($courses);
+
+// Ordenar descendente usando keys
+krsort($courses);
 
 var_dump($courses);
 
 
-foreach ($courses as $key => $value) {
-    echo "$key: $value <br>";
-}
+// Retirar el primer elemento
+var_dump(array_slice($courses, 1));
 
+// Agrupar elementos dentro del array
+var_dump(array_chunk($courses, 2));
+
+// Eliminar el último elemento y retornarlo
+var_dump(array_shift($courses));
 echo '<br>';
 
-foreach ($courses as $course) {
-    echo "$course <br>";
-}
-
-function upper($course, $key)
-{
-    echo strtoupper($course) . ":" . strtoupper($key) . "<br>";
-}
-
-array_walk($courses, 'upper');
-
-// A nivel llave
-echo array_key_exists('frontend', $courses);
+// Eliminar el primer elemento y retornarlo
+var_dump(array_pop($courses));
 echo '<br>';
-// A nivel valores
-echo in_array('javascript', $courses);
+
+// Agrega un elemetno a la primer posición y retorna el tamaño del array
+var_dump(array_unshift($courses, 'Java'));
+var_dump($courses);
+
 echo '<br>';
-// Imprimir keys
-echo var_dump(array_keys($courses));
-// Imprimir valroes
-echo var_dump(array_values($courses));
+// Agrega un elemetno al final
+var_dump(array_push($courses, 'Python'));
+var_dump($courses);
+
+$courses = [ 'backend' => 'php', 'frontend' => 'javascript'];
+
+// Intercambia llaves y keys
+var_dump(array_flip($courses));
