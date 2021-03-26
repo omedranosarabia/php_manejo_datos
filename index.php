@@ -1,54 +1,34 @@
 <?php
 
-$courses = ['php', 'javascript', 'laravel'];
+$courses = ['javascript', 'php'];
 
-// Ordenar arrays
-sort($courses);
+$wishes = ['php', 'laravel', 'javascript', 'vuejs'];
 
+// var_dump(array_diff($wishes, $courses));
+
+$arrayA = [1, 2, 3, 4, 5];
+$arrayB = [3, 4, 5, 6, 7];
+
+var_dump(array_diff($arrayA, $arrayB));
+var_dump(array_diff($arrayB, $arrayA));
+
+// Función que muestra las diferencias entre dos array con base
+// en los valores y los keys
+// Si el mismo array tiene dos o más llaves idénticas, sólo considera la última
+
+$courses = ['Frontend' => 'javascript', 'Backend' => 'php'];
+echo 'Courses <br>';
 var_dump($courses);
-
-// Ordenar descendente
-rsort($courses);
-
-var_dump($courses);
-
-$courses = [ 10 => 'php', 100 => 'javascript', 1000 => 'laravel'];
-
-// Ordenar usando keys
-ksort($courses);
-
-var_dump($courses);
-
-// Ordenar descendente usando keys
-krsort($courses);
-
-var_dump($courses);
+$wishes = ['Backend' => 'php', 'Framework' => 'laravel', 'Frontend' => 'javascript', 'Framework' => 'vuejs'];
+echo 'Wishes <br>';
+var_dump($wishes);
+var_dump(array_diff_assoc($wishes, $courses));
 
 
-// Retirar el primer elemento
-var_dump(array_slice($courses, 1));
+$array1    = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2    = array("a" => "green", "z" => "yellow", "z" => "red", "z" => "orange");
+$resultado = array_diff_assoc($array1, $array2);
+var_dump($resultado);
 
-// Agrupar elementos dentro del array
-var_dump(array_chunk($courses, 2));
-
-// Eliminar el último elemento y retornarlo
-var_dump(array_shift($courses));
-echo '<br>';
-
-// Eliminar el primer elemento y retornarlo
-var_dump(array_pop($courses));
-echo '<br>';
-
-// Agrega un elemetno a la primer posición y retorna el tamaño del array
-var_dump(array_unshift($courses, 'Java'));
-var_dump($courses);
-
-echo '<br>';
-// Agrega un elemetno al final
-var_dump(array_push($courses, 'Python'));
-var_dump($courses);
-
-$courses = [ 'backend' => 'php', 'frontend' => 'javascript'];
-
-// Intercambia llaves y keys
-var_dump(array_flip($courses));
+$resultado = array_diff_assoc($array2, $array1);
+var_dump($resultado);
